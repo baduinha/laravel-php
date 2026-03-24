@@ -18,24 +18,24 @@
                             @csrf
 
                             <div class="mb-4">
-                                <label for="title" class="block text-sm font-medium text-gray-700">Título</label>
-                                <input type="text" id="title" name="title" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>
+                                <label for="title" class="block text-sm font-medium text-gray-900">Título</label>
+                                <input type="text" id="title" name="title" class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm text-gray-900 placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500" required>
                                 @error('title')
                                     <p class="text-red-500 text-sm">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="mb-4">
-                                <label for="content" class="block text-sm font-medium text-gray-700">Conteúdo</label>
-                                <textarea id="content" name="content" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required></textarea>
+                                <label for="content" class="block text-sm font-medium text-gray-900">Conteúdo</label>
+                                <textarea id="content" name="content" rows="4" class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm text-gray-900 placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500" required></textarea>
                                 @error('content')
                                     <p class="text-red-500 text-sm">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="mb-4">
-                                <label for="category" class="block text-sm font-medium text-gray-700">Categoria</label>
-                                <input type="text" id="category" name="category" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                <label for="category" class="block text-sm font-medium text-gray-900">Categoria</label>
+                                <input type="text" id="category" name="category" class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm text-gray-900 placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500">
                                 @error('category')
                                     <p class="text-red-500 text-sm">{{ $message }}</p>
                                 @enderror
