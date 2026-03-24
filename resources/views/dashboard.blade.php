@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            dashboard
         </h2>
     </x-slot>
 
@@ -93,7 +93,7 @@
                                     <form method="POST" action="{{ route('comments.store', $post) }}" class="mt-2">
                                         @csrf
                                         <textarea name="content" rows="2" class="w-full border-gray-300 rounded-md shadow-sm" placeholder="Adicione um comentário..."></textarea>
-                                        <button type="submit" class="mt-1 bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">Comentar</button>
+                                        <button type="submit" class="mt-1 bg-blue-500 hover:bg-blue-700 text-black py-1 px-3 rounded text-sm">Comentar</button>
                                     </form>
                                 </div>
                             </div>
