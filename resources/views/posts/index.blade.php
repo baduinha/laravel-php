@@ -32,7 +32,7 @@
                                 <p class="text-sm text-gray-600">Por {{ $post->user->name }} em {{ $post->published_at->format('d/m/Y') }}
                                     @if($post->category) - Categoria: {{ $post->category }} @endif
                                 </p>
-                                <p class="mt-2">{{ Str::limit($post->content, 200) }}</p>
+                                <p class="mt-2">{{ strlen($post->content) > 200 ? substr($post->content, 0, 200) . '...' : $post->content }}</p>
                             </div>
                         @empty
                             <p>Nenhum post encontrado.</p>

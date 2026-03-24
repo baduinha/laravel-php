@@ -23,7 +23,7 @@ class PostController extends Controller
             $query->where('category', $request->category);
         }
 
-        $posts = $query->latest('published_at')->paginate(10);
+        $posts = $query->with('user')->latest('published_at')->paginate(10);
 
         return view('posts.index', compact('posts'));
     }
@@ -66,6 +66,8 @@ class PostController extends Controller
         if (!$post->isPublished() && $post->user_id !== Auth::id()) {
             abort(404);
         }
+
+        $post->load('comments.user');
 
         return view('posts.show', compact('post'));
     }
