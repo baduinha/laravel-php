@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Dashboard
                     </x-nav-link>
+
+                    @guest
+                        <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                            Cadastre-se
+                        </x-nav-link>
+                    @endguest
                 </div>
             </div>
 
