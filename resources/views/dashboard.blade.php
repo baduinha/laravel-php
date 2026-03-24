@@ -16,7 +16,8 @@
                     <h3 class="text-lg font-semibold mb-4">Seus Posts</h3>
 
                     <div class="space-y-4">
-                        @forelse(auth()->user()->posts as $post)
+                        @php $posts = auth()->user()?->posts ?? collect(); @endphp
+                        @forelse($posts as $post)
                             <div class="border-b pb-4 flex justify-between items-center">
                                 <div>
                                     <h4 class="font-semibold"><a href="{{ route('posts.show', $post) }}" class="text-blue-600">{{ $post->title }}</a></h4>
