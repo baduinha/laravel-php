@@ -46,7 +46,7 @@
                                     <input type="checkbox" name="published" value="1" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500">
                                     <span class="ml-2 text-sm text-gray-600">Publicar imediatamente</span>
                                 </label>
-                                <button type="submit" name="action" value="postar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Postar</button>
+                                <button type="submit" name="action" value="postar" class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Postar</button>
                             </div>
 
                             <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Criar Post</button>
