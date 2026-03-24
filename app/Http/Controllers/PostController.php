@@ -50,7 +50,7 @@ class PostController extends Controller
 
         $post = new Post($request->only(['title', 'content', 'category']));
         $post->user_id = Auth::id();
-        if ($request->published) {
+        if ($request->published || $request->action === 'postar') {
             $post->published_at = now();
         }
         $post->save();
