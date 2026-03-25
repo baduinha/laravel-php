@@ -1,58 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel - Framework Web PHP
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📌 Sobre Laravel
 
-## About Laravel
+**Laravel** é um framework web PHP moderno e elegante, projetado para facilitar o desenvolvimento de aplicações web com uma sintaxe expressiva e intuitiva. Ele oferece uma estrutura robusta que acelera o desenvolvimento, reduz código repetitivo e promove boas práticas de engenharia de software.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Principais Características:
+- ✅ Eloquent ORM - Abstração de banco de dados intuitiva
+- ✅ Blade - Motor de templates poderoso
+- ✅ Routing elegante e semântico
+- ✅ Migração de banco de dados automatizada
+- ✅ Middleware para controle de requisições
+- ✅ Autenticação e autorização integradas
+- ✅ API RESTful nativa
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 👨‍💻 Criador
 
-## Learning Laravel
+**Laravel** foi criado por **Taylor Otwell** em 2011. Taylor desenvolveu o framework como uma alternativa mais intuitiva e "elegante" aos frameworks PHP existentes na época, priorizando a produtividade e a experiência do desenvolvedor.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Linguagem de Programação
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- **Linguagem Principal:** PHP 8.0+
+- **Banco de Dados:** MySQL, PostgreSQL, SQLite, SQL Server
+- **Frontend:** Blade Templates (PHP), pode integrar Vue.js, React, Alpine.js
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 🚀 Projeto Exemplo: Sistema de Blog
 
-```bash
-composer require laravel/boost --dev
+Para demonstrar as funcionalidades do Laravel, será desenvolvido um **Sistema de Blog Simples** com as seguintes features:
 
-php artisan boost:install
+### Funcionalidades:
+1. **Autenticação** - Registro e login de usuários
+2. **CRUD de Posts** - Criar, ler, atualizar e deletar posts
+3. **Comentários** - Adicionar comentários nos posts
+4. **Dashboard** - Painel de controle para o autor
+5. **Listagem Pública** - Exibição de posts publicados
+6. **Busca e Filtros** - Buscar posts por título ou categoria
+
+### Stack Tecnológico:
+- Laravel 10+
+- MySQL para banco de dados
+- Blade para templates
+- Bootstrap para styling
+- Laravel Eloquent ORM
+
+### Estrutura do Projeto:
+```
+blog-laravel/
+├── app/
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Post.php
+│   │   └── Comment.php
+│   ├── Http/Controllers/
+│   │   ├── PostController.php
+│   │   ├── CommentController.php
+│   │   └── AuthController.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/views/
+│   ├── posts/
+│   ├── comments/
+│   └── auth/
+├── routes/
+│   └── web.php
+└── public/
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+---
 
-## Contributing
+## 📚 Resumo do Aprendizado
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este projeto visa explorar:
+- Estrutura MVC do Laravel
+- Eloquent ORM e relacionamentos
+- Migrations para versionamento de banco de dados
+- Controllers e Routes
+- Autenticação e autorização
+- Blade templates
+- Validação de dados 
