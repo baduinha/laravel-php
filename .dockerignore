@@ -1,0 +1,38 @@
+# Ignore Git metadata and local editor configuration.
+.git
+.gitignore
+.vscode
+.idea
+
+# Node and PHP dependencies are installed inside the container.
+node_modules
+vendor
+
+# Local environment files must never be baked into images.
+.env
+.env.*
+
+# Local sqlite database file should remain local.
+database/database.sqlite
+
+# Ignore build artifacts and temporary files.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+public/build
+storage/*.key
+
+# Ignore tests and CI tooling in production image context.
+tests
+phpunit.xml
+phpunit.xml.dist
+
+# Exclude Laravel cached bootstrap files from the build context to avoid stale provider definitions.
+bootstrap/cache/*
+
+# Keep only the healthcheck script under docker/ for the build.
+docker/*
+!docker/app-healthcheck.sh
+
+# Ignore compose files, but keep the Dockerfile available for build.
+docker-compose*.yml
