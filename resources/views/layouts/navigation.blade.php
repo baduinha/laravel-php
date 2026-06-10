@@ -5,25 +5,25 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex items-center shrink-0">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('posts.index') }}">
                         <x-application-logo class="block w-auto text-gray-800 fill-current h-9" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.*')">
+                    <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.*')">
                         Posts
                     </x-nav-link>
 
                     @guest
-                        <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                        <x-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
                             Cadastro
                         </x-nav-link>
                     @endguest
 
                     @auth
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                             Dashboard
                         </x-nav-link>
                     @endauth
@@ -51,7 +51,7 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link :href="route('profile.edit')">
+                            <x-dropdown-link href="{{ route('profile.edit') }}">
                                 Perfil
                             </x-dropdown-link>
 
@@ -59,7 +59,7 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
-                                <x-dropdown-link :href="route('logout')"
+                                <x-dropdown-link href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     this.closest('form').submit();">
                                     Sair
@@ -89,12 +89,12 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.*')">
+            <x-responsive-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.*')">
                 Posts
             </x-responsive-nav-link>
 
             @auth
-                <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                     Dashboard
                 </x-responsive-nav-link>
             @endauth
@@ -114,7 +114,7 @@
 
             <div class="mt-3 space-y-1">
                 @auth
-                    <x-responsive-nav-link :href="route('profile.edit')">
+                    <x-responsive-nav-link href="{{ route('profile.edit') }}">
                         Perfil
                     </x-responsive-nav-link>
 
@@ -122,14 +122,14 @@
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 
-                        <x-responsive-nav-link :href="route('logout')"
+                        <x-responsive-nav-link href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             this.closest('form').submit();">
                             Sair
                         </x-responsive-nav-link>
                     </form>
                 @else
-                    <x-responsive-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                    <x-responsive-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
                         Cadastro
                     </x-responsive-nav-link>
                 @endauth
